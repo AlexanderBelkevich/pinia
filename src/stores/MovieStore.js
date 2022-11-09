@@ -19,9 +19,17 @@ export const useMovieStore = defineStore("movieStore", {
           "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
         poster_path: "/b0PlSFdDwbyK0cf5RxwDpaOJQvQ.jpg",
         release_date: "2022-03-01",
-        isWatched: false,
+        isWatched: true,
       },
     ],
     activeTab: 1,
   }),
+  getters: {
+    watchedMovies() {
+      return this.movies.filter((el) => el.isWatched);
+    },
+    totalCountMovies() {
+      return this.movies.length;
+    },
+  },
 });
