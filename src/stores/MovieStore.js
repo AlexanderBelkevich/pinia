@@ -22,7 +22,7 @@ export const useMovieStore = defineStore("movieStore", {
         isWatched: true,
       },
     ],
-    activeTab: 1,
+    activeTab: 2,
   }),
   getters: {
     watchedMovies() {
